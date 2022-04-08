@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  
+
+  <header class="desktop-menu">
+    <img src="images/logo.svg" alt="logo of company">
+    <nav>
+      <ul>
+
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dot"><p class="dot_value">2</p></div>
+    <div class="last-part">
+      <img src="images/icon-cart.svg" alt="shopping_cart svg" class="shopping">
+        <img src="images/image-avatar.png" alt="avatar img" class="avatar" class="avatar">
+    </div>
+  </header>
+
+  <header class="mobile-menu">
+    <img src="images/icon-menu.svg" class="menu">
+    <img src="images/logo.svg" alt="logo of company" class="logo">
+    <nav>
+      <ul>
+
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="dot"><p class="dot_value">2</p></div>
+    <div class="last-part">
+      <img src="images/icon-cart.svg" alt="shopping_cart svg" class="shopping">
+        <img src="images/image-avatar.png" alt="avatar img" class="avatar" class="avatar">
+    </div>
+  </header>
+<div class="line"></div>
+
+
+  <div class="products_section">
+    <div class="product_main_pictures">
+      <div class="main-thumbnail">
+        <img src="images/image-product-1.jpg" alt="thumbnail" id="products">
+      </div>
+      <div class="second-image-products">
+        <img src="images/image-product-1-thumbnail.jpg" class="active products">
+        <img src="images/image-product-2.jpg " alt="product 2"id="products" >
+        <img src="images/image-product-3.jpg" alt="product 3"id="products">
+        <img src="images/image-product-4.jpg" alt="product 4"id="products">
+      </div>
+  
+</div>
+
+<div class="product_text">
+  
+    <span class="brand">Sneaker Company</span>
+    <h4>Fall Limited Edition <br> Sneakers</h4>
+    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <span class="price">  $125.00</span>
+      <span class="price-disc">50%</span>
+      <span class="disc">$250.00</span>
+  
+    
+
+      <div class="card">
+        <div class="add">
+          <div class="cont dicrease" id="count1"><img src="images/icon-minus.svg"></div>
+        <div class="cont number" id="active">0</div>
+        <div class="cont increase" id="count2"><img src="images/icon-plus.svg"></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<div id="btn">
+  <button> <img src="images/icon-cart.svg" alt="shopping_cart svg" class="shopping_cart"> Add To Card </button>
+</div>
+
+
+
+
+ 
+
+
+  
+
+<div class="cart-shop">
+  <h2>Cart</h2>
+  <div class="lines"></div>
+ <div class="content">
+   <div class="head">
+     <img src="images/image-product-1-thumbnail.jpg">
+     <p>Fall Limited Edition
+      Sneakers</p>
+   </div>
+   <div class="cart-body">
+     <span>$125.00 x 3 $375.00 </span>
+     <img src="images/icon-delete.svg" class="del">
+    <input type="button" value="Checkout">
+   </div>
+ </div>
+</div>
+  
+<div class="show_products">
+  <div class="main">
+    <div class="main-thumbnail">
+      <img src="images/image-product-1.jpg" alt="thumbnail" class="main_slide">
+    </div>
+    <div class="second-image-products">
+      <img src="images/image-product-1-thumbnail.jpg" class="active ">
+      <img src="images/image-product-2.jpg " alt="product 2 " >
+      <img src="images/image-product-3.jpg" alt="product 3 ">
+      <img src="images/image-product-4.jpg" alt="product 4">
+    </div>
+  </div>
+ <div class="btn2">
+<div class="prev">
+  <!-- <img src="images/icon-previous.svg"> -->
+</div>
+  <div class="next">
+    <!-- <img src="images/icon-next.svg"> -->
+  </div>
+
+ </div>
+ <img src="images/icon-close.svg" class="close_btn">
+</div>
+
+
+  <script>
+    let shopping_button = document.getElementById('btn');
+    let btn = document.querySelector('.avatar');
+    let card = document.querySelector('.cart-shop');
+    btn.addEventListener('click', function(){
+        if(card.style.display == "none"){
+          card.style.display = "block";
+          
+        }
+        else{
+          card.style.display = "none";
+
+        }
+    });
+
+
+ 
+
+
+    // on plus minus number 
+
+  let count = 0;
+
+let number = document.querySelector('.number');
+let increase = document.querySelector('.increase');
+let dicrease = document.querySelector('.dicrease');
+
+//increase the numbers
+increase.addEventListener("click", function(){
+  count ++;
+  number.innerHTML = count;
+  // console.log("hello");    
+});
+
+//dicrease the numbers
+dicrease.addEventListener("click", function(){
+  count --;
+  number.innerHTML = count;
+  // console.log("hello");
+});
+
+let dot = document.querySelector('.dot');
+let dot_value = document.querySelector('.dot_value');
+
+
+// add to card button
+
+
+shopping_button.addEventListener('click', function(){
+   if(dot.style.display = 'none'){
+    //  console.log('hidden');
+    dot.style.display = "block";
+    dot_value.innerHTML = count;
+   }
+   else{
+     console.log('visible');
+   }
+   });
+
+// carousel in plain javascript
+
+let main_slide = document.querySelector('.main_slide');
+
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+let change=0;
+// next image
+next.addEventListener("click", function(){
+  change ++;
+main_slide.src = 'images/image-product-' + change + '.jpg';
+// console.log(main_slide.src = 'images/image-product-' + change + '.jpg');
+if(change == 5){
+  change =0;
+ 
+  change ++;
+  main_slide.src = 'images/image-product-' + change + '.jpg';
+}
+});
+
+//previous image
+
+let changes = 4;
+prev.addEventListener("click", function(){
+  changes --;
+main_slide.src = 'images/image-product-' + changes + '.jpg';
+// console.log(main_slide.src = 'images/image-product-' + changes + '.jpg');
+if(changes == 4 || changes == 0){
+  changes = 5;
+ 
+  changes --;
+  main_slide.src = 'images/image-product-' + changes + '.jpg';
+}
+});
+
+// show the carousel or slide show
+let products = document.querySelector('#products');
+let carousel = document.querySelector('.show_products');
+products.addEventListener('click',function(){
+if(carousel.style.display = "none"){
+  carousel.style.display = "block";
+}
+else{
+  carousel.style.display = "none";
+  
+}
+});
+
+
+
+// close the carousel
+let close_btn = document.querySelector('.close_btn');
+close_btn.addEventListener('click',function(){
+ carousel.style.display="none";
+})
+  </script>
+
+
+</body>
+</html>
