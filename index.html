@@ -47,7 +47,7 @@
     <div class="dot"><p class="dot_value">2</p></div>
     <div class="last-part">
       <img src="images/icon-cart.svg" alt="shopping_cart svg" class="shopping">
-        <img src="images/image-avatar.png" alt="avatar img" class="avatar" class="avatar">
+        <img src="images/image-avatar.png" alt="avatar img" class="avatar">
     </div>
   </header>
 <div class="line"></div>
@@ -59,10 +59,10 @@
         <img src="images/image-product-1.jpg" alt="thumbnail" id="products">
       </div>
       <div class="second-image-products">
-        <img src="images/image-product-1-thumbnail.jpg" class="active products">
-        <img src="images/image-product-2.jpg " alt="product 2"id="products" >
-        <img src="images/image-product-3.jpg" alt="product 3"id="products">
-        <img src="images/image-product-4.jpg" alt="product 4"id="products">
+        <img src="images/image-product-1-thumbnail.jpg" class="active">
+        <img src="images/image-product-2.jpg " alt="product 2">
+        <img src="images/image-product-3.jpg" alt="product 3">
+        <img src="images/image-product-4.jpg" alt="product 4">
       </div>
   
 </div>
@@ -81,9 +81,9 @@
 
       <div class="card">
         <div class="add">
-          <div class="cont dicrease" id="count1"><img src="images/icon-minus.svg"></div>
+          <div class="cont dicrease" id="count1"><img src="images/icon-minus.svg" alt="Card Image"></div>
         <div class="cont number" id="active">0</div>
-        <div class="cont increase" id="count2"><img src="images/icon-plus.svg"></div>
+        <div class="cont increase" id="count2"><img src="images/icon-plus.svg" alt="Trash icon"></div>
         </div>
         
       </div>
@@ -106,13 +106,13 @@
   <div class="lines"></div>
  <div class="content">
    <div class="head">
-     <img src="images/image-product-1-thumbnail.jpg">
+     <img src="images/image-product-1-thumbnail.jpg" alt="product image">
      <p>Fall Limited Edition
       Sneakers</p>
    </div>
    <div class="cart-body">
      <span>$125.00 x 3 $375.00 </span>
-     <img src="images/icon-delete.svg" class="del">
+     <img src="images/icon-delete.svg" class="del" alt="delete icon">
     <input type="button" value="Checkout">
    </div>
  </div>
@@ -121,13 +121,13 @@
 <div class="show_products">
   <div class="main">
     <div class="main-thumbnail">
-      <img src="images/image-product-1.jpg" alt="thumbnail" class="main_slide">
+      <img src="images/image-product-1.jpg" alt="thumbnail" class="main_slide" alt="product1 image ">
     </div>
     <div class="second-image-products">
-      <img src="images/image-product-1-thumbnail.jpg" class="active ">
-      <img src="images/image-product-2.jpg " alt="product 2 " >
-      <img src="images/image-product-3.jpg" alt="product 3 ">
-      <img src="images/image-product-4.jpg" alt="product 4">
+      <img src="images/image-product-1-thumbnail.jpg" class="active" alt="product1 image ">
+      <img src="images/image-product-2.jpg " alt="product 2 " alt="product2 image ">
+      <img src="images/image-product-3.jpg" alt="product 3 "alt="product3 image ">
+      <img src="images/image-product-4.jpg" alt="product 4"alt="product4 image ">
     </div>
   </div>
  <div class="btn2">
@@ -139,13 +139,13 @@
   </div>
 
  </div>
- <img src="images/icon-close.svg" class="close_btn">
+ <img src="images/icon-close.svg" class="close_btn" alt="close btn">
 </div>
 
 
   <script>
     let shopping_button = document.getElementById('btn');
-    let btn = document.querySelector('.avatar');
+    let btn = document.querySelector('.shopping');
     let card = document.querySelector('.cart-shop');
     btn.addEventListener('click', function(){
         if(card.style.display == "none"){
